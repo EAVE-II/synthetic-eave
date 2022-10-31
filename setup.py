@@ -11,7 +11,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setuptools.setup(
     name="SEAVE", 
     author="Calum Macdonald",
-    version='0.0.3',
+    version='0.0.4',
     author_email="calmacx@gmail.com",
     description="Python package for a synthetic EAVE",
     long_description=long_description,
@@ -45,5 +45,5 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires='>=3.8',
+    python_requires='>=3.6',
 )
