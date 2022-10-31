@@ -5,10 +5,9 @@ import sys
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-with open('requirements.txt') as f:
-    required = f.read().splitlines()
-
-
+#with open('requirements.txt') as f:
+#    required = f.read().splitlines()
+   
 setuptools.setup(
     name="SEAVE", 
     author="Calum Macdonald",
@@ -31,7 +30,12 @@ setuptools.setup(
     #    'sql':['sqlalchemy','psycopg2-binary==2.8.6','sqlalchemy-utils'],
     #    'performance':['snakeviz'],
     #},
-    install_requires=required,
+    install_requires=[
+        'pandas',
+        'numpy',
+        'scipy',
+        'matplotlib'
+    ],
     #package_data={'coconnect': ['data/cdm/*','data/example/*/*','data/test/*/*','data/test/*/*/*']},
     include_package_data=True,
     classifiers=[
