@@ -11,19 +11,19 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setuptools.setup(
     name="SEAVE", 
     author="Calum Macdonald",
-    version='0.0.1',
+    version='0.0.3',
     author_email="calmacx@gmail.com",
     description="Python package for a synthetic EAVE",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/EAVE-II/synthetic-eave",
-    #entry_points = {
-    #    'console_scripts':[
-    #        'coconnect=coconnect.cli.cli:coconnect',
+    entry_points = {
+        'console_scripts':[
+            'seave=seave.cli.cli:_seave',
     #        'etltool=coconnect.cli.subcommands.map:run',
     #        'etl-gui=coconnect.cli.subcommands.map:gui',
-    #    ],
-    #},
+        ],
+    },
     packages=setuptools.find_packages(),
     #extras_require = {
     #    'airflow':['apache-airflow'],
@@ -34,7 +34,9 @@ setuptools.setup(
         'pandas',
         'numpy',
         'scipy',
-        'matplotlib'
+        'matplotlib',
+        'dill',
+        'click'
     ],
     #package_data={'coconnect': ['data/cdm/*','data/example/*/*','data/test/*/*','data/test/*/*/*']},
     include_package_data=True,
